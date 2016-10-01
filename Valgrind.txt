@@ -1,0 +1,33 @@
+==6109== Memcheck, a memory error detector
+==6109== Copyright (C) 2002-2011, and GNU GPL'd, by Julian Seward et al.
+==6109== Using Valgrind-3.7.0 and LibVEX; rerun with -h for copyright info
+==6109== Command: ./assignment4
+==6109== Parent PID: 6009
+==6109== 
+disInstr(arm): unhandled instruction: 0xF1010200
+                 cond=15(0xF) 27:20=16(0x10) 4:4=0 3:0=0(0x0)
+==6109== valgrind: Unrecognised instruction at address 0x48426f4.
+==6109==    at 0x48426F4: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem.so)
+==6109== Your program just tried to execute an instruction that Valgrind
+==6109== did not recognise.  There are two possible reasons for this.
+==6109== 1. Your program has a bug and erroneously jumped to a non-code
+==6109==    location.  If you are running Memcheck and you just saw a
+==6109==    warning about a bad jump, it's probably your program's fault.
+==6109== 2. The instruction is legitimate but Valgrind doesn't handle it,
+==6109==    i.e. it's Valgrind's fault.  If you think this is the case or
+==6109==    you are not sure, please let us know and we'll try to fix it.
+==6109== Either way, Valgrind will now raise a SIGILL signal which will
+==6109== probably kill your program.
+==6109== 
+==6109== Process terminating with default action of signal 4 (SIGILL)
+==6109==  Illegal opcode at address 0x48426F4
+==6109==    at 0x48426F4: ??? (in /usr/lib/arm-linux-gnueabihf/libarmmem.so)
+==6109== 
+==6109== HEAP SUMMARY:
+==6109==     in use at exit: 0 bytes in 0 blocks
+==6109==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==6109== 
+==6109== All heap blocks were freed -- no leaks are possible
+==6109== 
+==6109== For counts of detected and suppressed errors, rerun with: -v
+==6109== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
